@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+
+.wrapper-inner-page-bottom {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.before_after {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (max-width: $mobile) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	> div {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+
+		@media (max-width: $mobile) {
+			width: 48%;
+		}
+	}
+
+	img {
+		border-radius: 14px;
+		width: fit-content;
+	}
+}
+
+.center {
+	text-align: center;
+	margin: 6px 0 18px;
+}

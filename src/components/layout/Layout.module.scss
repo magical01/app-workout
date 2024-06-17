@@ -1,0 +1,57 @@
+@import 'src/assets/styles/variables';
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100%;
+	max-width: 650px;
+	width: 100%;
+	padding: 25px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: $accent;
+		opacity: 0.2;
+		pointer-events: none;
+		border-radius: 18px;
+		// z-index: ;
+	}
+
+	& > header {
+		position: relative;
+		z-index: 5;
+	}
+
+	& > div {
+		position: relative;
+		z-index: 5;
+	}
+
+	&.otherPage {
+		height: 280px;
+		border-radius: 0 0 20px 20px;
+		box-shadow: $bx-accent;
+
+		@media (max-width: $mobile) {
+			height: 260px !important;
+		}
+	}
+}
+
+.heading {
+	text-transform: uppercase;
+	color: $white;
+	font-size: 30px;
+	font-weight: bold;
+	@media (max-width: $mobile) {
+		font-size: 24px;
+	}
+}
